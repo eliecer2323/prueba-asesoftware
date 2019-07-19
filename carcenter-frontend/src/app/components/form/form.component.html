@@ -1,0 +1,91 @@
+<br>
+<p-toast [style]="{marginTop: '80px'}" position="top-left" key="result"></p-toast>
+<form [formGroup]="mecanicoForm" (ngSubmit)="save()">
+    <div class="p-grid">
+        <div class="p-col-2">
+            <label>
+                Tipo Documento*:
+            </label>
+        </div>
+        <div class="p-col-4">
+            <p-dropdown [options]="tiposDocumento" formControlName="tipoDocumento" optionLabel="name" required></p-dropdown>
+        </div>
+        <div class="p-col-2">
+            <label>
+                Documento*:
+            </label>
+        </div>
+        <div class="p-col-4">
+            <input type="number" pInputText formControlName="documento" required>
+        </div>
+        <div class="p-col-2">
+            <label>
+                Primer Nombre*:
+            </label>
+        </div>
+        <div class="p-col-4">
+            <input type="text" pInputText formControlName="primerNombre" required>
+        </div>
+        <div class="p-col-2">
+            <label>
+                Segundo Nombre:
+            </label>
+        </div>
+        <div class="p-col-4">
+            <input type="text" pInputText formControlName="segundoNombre">
+        </div>
+        <div class="p-col-2">
+            <label>
+                Primer Apellido*:
+            </label>
+        </div>
+        <div class="p-col-4">
+            <input type="text" pInputText formControlName="primerApellido" required>
+        </div>
+        <div class="p-col-2">
+            <label>
+                Segundo Apellido:
+            </label>
+        </div>
+        <div class="p-col-4">
+            <input type="text" pInputText formControlName="segundoApellido">
+        </div>
+        <div class="p-col-2">
+            <label>
+                Celular*:
+            </label>
+        </div>
+        <div class="p-col-4">
+            <input type="text" pInputText formControlName="celular" required>
+        </div>
+        <div class="p-col-2">
+            <label>
+                Dirección*:
+            </label>
+        </div>
+        <div class="p-col-4">
+            <input type="text" pInputText formControlName="direccion" required>
+        </div>
+        <div class="p-col-2">
+            <label>
+                Email*:
+            </label>
+        </div>
+        <div class="p-col-4">
+            <input type="mail" pInputText formControlName="email" required>
+        </div>
+        <div class="p-col-2">
+            <label>
+                Estado*:
+            </label>
+        </div>
+        <div class="p-col-4">
+            <p-inputSwitch formControlName="estado"></p-inputSwitch>
+        </div>
+
+        <div class="p-col-12 center">
+            <button pButton type="submit" label="Guardar"></button>
+        </div>
+    </div>
+
+</form>
